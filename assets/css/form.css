@@ -1,0 +1,240 @@
+.field input{
+    font-size: 12px;
+}
+/* Стили формы заявления */
+form {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0;
+    background-color: #323232;
+    border-radius: 8px;
+    border: 1px solid #0d7377;
+    box-shadow: 0 4px 12px rgba(13, 115, 119, 0.3);
+}
+
+.login-form {
+    padding: 25px;
+}
+
+.login-form .text {
+    font-size: 22px;
+    color: #14ffec;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field input {
+    width: 100%;
+    padding: 12px 5px;
+    background-color: #424242;
+    border: 1px solid #0d7377;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.field input:focus {
+    border-color: #14ffec;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(20, 255, 236, 0.2);
+}
+
+.field input::placeholder {
+    color: #9e9e9e;
+    opacity: 1;
+}
+
+button {
+    display: block;
+    width: 100%;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 14px 20px;
+    background-color: #0d7377;
+    color: #ffffff;
+    border: 2px solid #14ffec;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #14ffec;
+    color: #212121;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(20, 255, 236, 0.4);
+}
+
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(20, 255, 236, 0.4);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+button:hover::after {
+    left: 100%;
+}
+
+@media (max-width:769px){
+    .link{
+        text-align: center;
+    }
+}
+/* Адаптивные стили для кнопки */
+@media (max-width: 768px) {
+    button {
+        width: 60%;
+        padding: 12px 18px;
+        font-size: 15px;
+        margin: 25px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 70%;
+        padding: 10px 16px;
+        font-size: 14px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 381px) {
+    button {
+        width: 75%;
+        padding: 10px 16px;
+        font-size: 14px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 341px) {
+    button {
+        width: 80%;
+        padding: 10px 16px;
+        font-size: 14px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 320px) {
+    button {
+        width: 80%;
+        min-width: auto;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 310px) {
+    button {
+        width: 85%;
+        min-width: auto;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+#msg {
+    padding: 15px;
+    margin: 0 0 20px 0;
+    background-color: #ff4444;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Стили для файлового ввода */
+input[type="file"] {
+    padding: 5px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    padding: 8px 12px;
+    background-color: #0d7377;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #14ffec;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #14ffec;
+    color: #212121;
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+    form {
+        margin: 20px 15px;
+    }
+    
+    .login-form {
+        padding: 20px;
+    }
+    
+    .login-form .text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 399px) {
+    .login-form {
+        padding: 15px;
+    }
+    
+    .login-form .text {
+        font-size: 10px;
+    }
+    
+    .field input {
+        padding: 10px 0px;
+        font-size: 13px;
+    }
+
+}
+@media (max-width: 320px) {
+    .login-form {
+        padding: 15px;
+    }
+    
+    .login-form .text {
+        font-size: 10px;
+    }
+    
+    .field input {
+        padding: 10px 0px;
+        font-size: 11px;
+    }
+
+}

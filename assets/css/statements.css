@@ -1,0 +1,300 @@
+.container {
+    color: black;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    color: #14ffec;
+    border: 2px solid #323232;
+    box-shadow: inset 0 0 1px #0d7377;
+}
+
+th, td {
+    background-color: #212121;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #323232;
+}
+
+p {
+    color: #212121;
+}
+
+/* Стили для кнопок редактирования и удаления */
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 2px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background-color: #0d7377;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #14ffec;
+    color: #212121;
+}
+
+.delete-button {
+    background-color: #323232;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #212121;
+    color: #14ffec;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.message.success {
+    background-color: rgba(13, 115, 119, 0.2);
+    color: #14ffec;
+    border: 1px solid #0d7377;
+}
+
+.message.error {
+    background-color: rgba(50, 50, 50, 0.3);
+    color: #14ffec;
+    border: 1px solid #323232;
+}
+
+/* Стили для подтверждённых заявлений */
+tr.status-confirmed td {
+    background-color: rgba(13, 115, 119, 0.3);
+    color: #14ffec;
+}
+
+/* Стили для отклонённых заявлений */
+tr.status-rejected td {
+    background-color: rgba(50, 50, 50, 0.5);
+    color: #14ffec;
+}
+
+/* Стили для фотографий в заявлениях */
+.photo-container {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statement-photo {
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #323232;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 809px) {
+    .statement-photo {
+        max-height: 150px;
+    }
+    
+    td[data-label="Фото"] {
+        text-align: center;
+    }
+    
+    td[data-label="Фото"]::before {
+        text-align: center;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .statement-photo {
+        max-height: 120px;
+    }
+}
+
+/* Адаптация для 855px и меньше */
+@media (max-width: 856px) {
+    .container {
+        width: 95%;
+        padding: 12px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    h1{
+        text-align: center;
+    }
+    table {
+        font-size: 0.95em;
+    }
+    
+    th, td {
+        padding: 7px;
+    }
+    
+    .edit-button, .delete-button {
+        padding: 5px 9px;
+        font-size: 13px;
+    }
+}
+
+/* Адаптация для 809px и меньше */
+@media (max-width: 809px) {
+    .container {
+        width: 98%;
+        padding: 10px;
+    }
+    
+    table {
+        font-size: 0.9em;
+        margin-top: 15px;
+    }
+    
+    /* Преобразование таблицы */
+    table, tbody, tr, td {
+        display: block;
+    }
+
+    thead, th {
+        display: none; /* Полностью скрываем заголовок таблицы */
+    }
+
+    tr {
+        border-radius: 4px;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+        border: none;
+        border-bottom: 1px solid #323232;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #14ffec;
+    }
+
+    .edit-button, .delete-button {
+        display: inline-block;
+        width: 48%;
+        margin: 3px 1%;
+        box-sizing: border-box;
+    }
+}
+
+/* Адаптация для 650px и меньше */
+@media (max-width: 650px) {
+    .container {
+        width: 100%;
+        padding: 10px 8px;
+    }
+    
+    td {
+        padding-left: 55%;
+    }
+    
+    td::before {
+        width: 50%;
+        left: 8px;
+        font-size: 0.85em;
+    }
+    
+    .edit-button, .delete-button {
+        width: 100%;
+        margin: 4px 0;
+    }
+}
+
+/* Адаптация для 480px и меньше */
+@media (max-width: 480px) {
+    .container {
+        padding: 8px 6px;
+    }
+    
+    table {
+        font-size: 0.85em;
+    }
+    
+    td {
+        padding-left: 60%;
+    }
+    
+    td::before {
+        width: 55%;
+        font-size: 0.8em;
+        left: 6px;
+    }
+    
+    .message {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
+/* Адаптация для 375px и меньше */
+@media (max-width: 375px) {
+    td {
+        padding-left: 65%;
+    }
+    
+    td::before {
+        width: 60%;
+        font-size: 0.75em;
+    }
+    
+    .edit-button, .delete-button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+/* Адаптация для 320px и меньше */
+@media (max-width: 320px) {
+    .container {
+        padding: 6px 4px;
+    }
+    
+    td {
+        padding-left: 70%;
+    }
+    
+    td::before {
+        width: 65%;
+        left: 4px;
+    }
+    
+    .message {
+        padding: 6px;
+        font-size: 0.8em;
+    }
+}
